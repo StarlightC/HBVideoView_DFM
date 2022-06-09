@@ -17,6 +17,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'maven-publish'
 
 def SourcePath = 'src/main/'
 
@@ -46,5 +47,18 @@ android {
         implementation "androidx.core:core-ktx:1.6.0"
         implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.31"
         implementation "androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1"
+
+        implementation("com.github.StarlightC:HBVideoView_Core:v0.1.15")
+    }
+}
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.starlightc'
+                artifactId = 'hbvideoview_dfm'
+            }
+        }
     }
 }

@@ -15,4 +15,3 @@ dependencyResolutionManagement {
 }
 rootProject.name = "HBVideoView_DFM"
 include(":DanmakuFlameMaster")
-include(":dfm")
