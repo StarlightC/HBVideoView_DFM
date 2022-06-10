@@ -24,7 +24,7 @@ import master.flame.danmaku.ui.widget.DanmakuView
  *
  * 对 烈焰弹幕使 的简单封装
  */
-class DFMDanmakuProvider(private val context: Context) : DanmakuProvider<DanmakuView> {
+open class DFMDanmakuProvider(private val context: Context) : DanmakuProvider<DanmakuView> {
     override val danmakuView: DanmakuView = DanmakuView(context)
 
     override var initialized: Boolean = false
