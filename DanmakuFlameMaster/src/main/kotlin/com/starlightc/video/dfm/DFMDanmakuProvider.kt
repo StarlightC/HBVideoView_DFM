@@ -55,8 +55,7 @@ open class DFMDanmakuProvider(private val context: Context) : DanmakuProvider<Da
     }
 
     override fun addDanmaku(param: DanmakuParam) {
-        val danmaku: BaseDanmaku =
-            danmakuContext.mDanmakuFactory.createDanmaku(BaseDanmaku.TYPE_SCROLL_RL)
+        val danmaku: BaseDanmaku = danmakuContext.mDanmakuFactory.createDanmaku(BaseDanmaku.TYPE_SCROLL_RL, danmakuContext)
         danmaku.text = param.text
         danmaku.paddingHor = param.paddingHor
         danmaku.paddingVer = param.paddingVer
